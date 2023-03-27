@@ -1,3 +1,15 @@
-.page{
+
+.container{
+    width: 100%;
+    will-change: contents;
+    height: 90%;
+    min-height: 30rem;
+    opacity: 0;
+    top: 5%;
+    margin: 0 1rem 2rem 6.5rem;
+    z-index: 1;
+    transform-style: preserve-3d;
+    animation: fadeIn 1s forwards;
+
     
 }

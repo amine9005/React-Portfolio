@@ -4,12 +4,11 @@ import { Link, NavLink } from 'react-router-dom'
 import LogoM from '../../assets/logo/logo.png'
 import SubLogo from '../../assets/logo/Sub_Logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faEnvelope, faHome,faUser} from '@fortawesome/free-solid-svg-icons';
+import {faEnvelope, faHome,faSackDollar,faTrophy,faUser} from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const SideBar  = () => {
-    return <>
-        <div className='nav-bar'>
+    return <div className='nav-bar'>
             <Link className='logo' to='/'>
                 <img src={LogoM} alt='logo'/>
                 <img src={SubLogo} alt='Mohamed Amine'/>
@@ -24,6 +23,20 @@ const SideBar  = () => {
                     className="about-link"
                     to='/about'>
                     <FontAwesomeIcon icon={faUser} color="#4d4d4e"/>
+                </NavLink>
+                <NavLink 
+                    exact="true" 
+                    activeclassname="active" 
+                    className="projects-link"
+                    to='/Projects'>
+                    <FontAwesomeIcon icon={faSackDollar} color="#4d4d4e"/>
+                </NavLink>
+                <NavLink 
+                    exact="true" 
+                    activeclassname="active" 
+                    className="certifications-link"
+                    to='/Certs'>
+                    <FontAwesomeIcon icon={faTrophy} color="#4d4d4e"/>
                 </NavLink>
                 <NavLink 
                     exact="true" 
@@ -63,7 +76,6 @@ const SideBar  = () => {
             </ul>
 
         </div>
-    </>
 }
 
 export default SideBar

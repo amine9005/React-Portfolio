@@ -1,20 +1,20 @@
-$primary-color: #ffd700;
+$primary-color: #ffe600;
 
 @import 'animate.css';
 
 @font-face {
-  font-family: 'Playfair Display';
-  src: url('./assets/fonts/PlayfairDisplay-Black.ttf') format('ttf');
+  font-family: 'Lobster';
+  src: url('./assets/fonts/Lobster-Regular.ttf');
 }
 
 @font-face {
-  font-family: 'La Belle Aurore Regular';
-  src: url('./assets/fonts/LaBelleAurore-Regular.ttf') format('ttf');
+  font-family: 'La Belle Aurore';
+  src: url('./assets/fonts/LaBelleAurore-Regular.ttf');
 }
 
 @font-face {
-  font-family: 'Oswald Regular';
-  src: url('./assets/fonts/Oswald-Regular.ttf') format('ttf');
+  font-family: 'Oswald';
+  src: url('./assets/fonts/Oswald-Regular.ttf');
 }
 
 input,textarea{
