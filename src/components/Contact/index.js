@@ -14,8 +14,7 @@ const Contact = () => {
                 </h1>
                 <p>
                     I'm intersted in a remote web developer position and freelance opportunities.
-                    however if you have any other requests or questions 
-                    feel free to contact me
+                    however if you have any other requests or questions you are welcomed to contact me
                 </p>
 
                 <div className='contact-form'>

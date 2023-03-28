@@ -20,7 +20,7 @@
         border-color: transparent;
         border-radius: 55%;
         border-width: 0;
-        animation: rotateCircle 2s linear infinite;
+        animation: rotateCircle 1.5s linear infinite;
         padding: 3px;
         display: table;
     
@@ -32,7 +32,7 @@
             border-color: transparent;
             border-radius: 55%;
             border-width: 2px;
-            animation: rotateCircle 2s linear infinite reverse;
+            animation: rotateCircle 1.5s linear infinite reverse;
             text-align: center;
         }
 
