@@ -1,7 +1,6 @@
 import './index.scss'
 import React from 'react'
 import AnimatedLetters from '../AnimatedLetters'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import pythonIcon from '../../assets/logo/python.png'
 import html5Icon from '../../assets/logo/html5.png'
 import cssIcon from '../../assets/logo/css.png'
@@ -10,6 +9,7 @@ import angularIcon from '../../assets/logo/angular.png'
 import jsIcon from '../../assets/logo/javaScript.png'
 import reactIcon from '../../assets/logo/react.png'
 import laravelIcon from '../../assets/logo/laravel.png'
+import { Link } from 'react-router-dom';
 
 
 export const About = () => {
@@ -30,6 +30,15 @@ export const About = () => {
         <p className='third'>
           Thank you for taking the time learn about me <strong>you are appreciated</strong> 
         </p>
+
+        <a target="_blank" 
+          className='flat-button'
+          rel='noreferrer'
+          href='https://drive.google.com/file/d/1VAqejn_2mCYK5QBKTlhtiv_R3BzraEPl/view?usp=sharing'
+          >
+              View My Resume
+        </a>
+
       </div>
 
       <div className='skills-bar-1'>

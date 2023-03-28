@@ -59,7 +59,16 @@
     }
 
    
+    .flat-button{
+        position: relative;
+        top: -1rem;
+        color: #ffd600;
+        font-size: 1.5rem;
+        font-weight: 400;
+        letter-spacing: 4px;
+        animation: fadeIn 2s 6s backwards;
 
+    }
     
 
 }
