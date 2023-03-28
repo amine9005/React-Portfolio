@@ -55,7 +55,7 @@ const SideBar  = () => {
                         <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e"/>
                     </a>
                 </li>
-
+                
                 <li>
                     <a target="_blank" 
                     rel='noreferrer'
