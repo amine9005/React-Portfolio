@@ -1,0 +1,65 @@
+.about-page{
+    position: absolute;
+    color: #fff;
+    font-size: 2rem;
+    width: 60%;
+    left: 1%;
+
+    p{
+        font-size: 2rem;
+    }
+
+    .first{
+        opacity: 0;
+        animation: fadeIn 2s 1s forwards;
+    }
+
+    .second {
+        opacity: 0;
+        animation: fadeIn 2s 3s forwards;
+    }
+
+    .third{
+        opacity: 0;
+        animation: fadeIn 2s 5s forwards;
+    }
+    strong{
+        color: #ffd600;
+    }
+
+    .skills-bar-1{
+        position: absolute;
+        right: -30%;
+        top: 20%;
+        font-size: 5rem;
+        opacity: 0;
+        animation: fadeIn 2s 1.5s forwards;
+
+        img{
+            position: relative;
+            width: 5rem;
+            height: 5rem;
+        }
+
+    }
+
+    .skills-bar-2{
+        position: absolute;
+        right: -45%;
+        top: 20%;
+        font-size: 5rem;
+        opacity: 0;
+        animation: fadeIn 2s 3s forwards;
+
+        img{
+            position: relative;
+            width: 5rem;
+            height: 5rem;
+        }
+    }
+
+   
+
+    
+
+}
