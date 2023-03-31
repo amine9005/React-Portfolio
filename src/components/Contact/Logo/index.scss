@@ -1,0 +1,79 @@
+.logo-container{
+    z-index: 0;
+    width: 32rem;
+    height: 32rem;
+    position:absolute;
+    top: 5%;
+    right: 10%;
+    bottom: 0;
+    left: auto;
+    margin: auto;
+    opacity: 0;
+    animation: fadeIn 3s 1s forwards;
+
+    
+    .outer-circle {
+        background-image: linear-gradient(rgb(255, 179, 0), rgb(255, 221, 0), #f9ff3f);
+        width: 32rem;
+        height: 32rem;
+        border-style: solid;
+        border-color: transparent;
+        border-radius: 55%;
+        border-width: 0;
+        animation: rotateCircle 1.5s linear infinite;
+        padding: 3px;
+        display: table;
+    
+        .inner-circle {
+            background: #ffd600;
+            height: 32rem;
+            width: 32rem;
+            border-style: solid;
+            border-color: transparent;
+            border-radius: 55%;
+            border-width: 2px;
+            animation: rotateCircle 1.5s linear infinite reverse;
+            text-align: center;
+        }
+
+    }
+
+    .solid-logo{
+        width: 32rem;
+        height: 32rem;
+        z-index: 1;
+        position: relative;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: 0;
+        margin: auto;
+        width: 100%;
+        border-radius: 100rem;
+
+    }
+    
+        @keyframes rotateCircle {
+        0% {
+            transform: rotate(0);
+        }
+    
+        25% {
+            transform: rotate(90deg);
+        }
+    
+        50% {
+            transform: rotate(180deg);
+        }
+    
+        75% {
+            transform: rotate(270deg);
+        }
+    
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+      
+
+}

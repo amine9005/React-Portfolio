@@ -1,10 +1,35 @@
 import './index.scss'
 
-import React from 'react'
+import React, { useState } from 'react'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
+import db from '../../firebase'
+import { addDoc,collection } from 'firebase/firestore'
+import Logo from './Logo';
+
+
+
 
 const Contact = () => {
+    const [name,setName] = useState ('')
+    const [subject,setSubject] = useState('')
+    const [email,setEmail] = useState('')
+    const [message,setMessage] = useState('')
+
+
+
+    const handleSubmition = async () => {
+        const docRef = collection(db,'Contacts')
+        const payload = {name:name,email:email,subject:subject,message:message}
+        alert("Here")
+        await addDoc(docRef,payload).then(()=> 
+        {alert("Submition was succesful")}
+        ).catch((error) => {
+          alert(error.message)
+        });
+        alert("Here")
+    }
+
   return (
     <>
         <div className='container contact-page'>
@@ -18,26 +43,24 @@ const Contact = () => {
                 </p>
 
                 <div className='contact-form'>
-                    <form>
+                    <form onSubmit={handleSubmition}>
                         <ul>
                             <li className='half'>
-                                <input type='text' name='name' placeholder='Name' required/>
+                                <input value={name} onChange={ (e)=>setName(e.target.value) }
+                                 type='text' name='name' placeholder='Name' required/>
                             </li>
                             <li className='halif'>
-                                <input type='email' name='email' placeholder='Email' required/>
+                                <input value={email} onChange={(e)=>setEmail(e.target.value)}
+                                type='email' name='email' placeholder='Email' required/>
                             </li>
                             <li>
-                                <input placeholder='Subject'
-                                type='text'
-                                name='subject'
-                                required
+                                <input value={subject} onChange={(e)=>setSubject(e.target.value)}
+                                placeholder='Subject' type='text' name='subject' required
                                 />
                             </li>
                             <li>
-                                <textarea 
-                                placeholder='Message'
-                                name='message'
-                                required 
+                                <textarea value={message} onChange={(e)=>setMessage(e.target.value)}
+                                placeholder='Message' name='message' required 
                                 ></textarea>
                             </li>
                             <li>
@@ -47,8 +70,10 @@ const Contact = () => {
                     </form>
                 </div>
             </div>
+           
             
         </div>
+        <Logo />
 
         <Loader type='pacman'/>
     </>
