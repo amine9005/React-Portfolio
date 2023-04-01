@@ -5,7 +5,7 @@ import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import db from '../../firebase'
 import { addDoc,collection } from 'firebase/firestore'
-import Logo from './Logo';
+import LogoContact from './Contact-Logo';
 
 
 
@@ -73,7 +73,7 @@ const Contact = () => {
            
             
         </div>
-        <Logo />
+        <LogoContact />
 
         <Loader type='pacman'/>
     </>

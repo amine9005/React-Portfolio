@@ -1,9 +1,9 @@
 import './index.scss'
 import myPic from '../../../assets/logo/myPic.png'
 
-const Logo = () => {
+const LogoContact = () => {
     return (
-        <div className='logo-container'>
+        <div className='logo-container-contact'>
                             
 
             <div class="outer-circle">
@@ -16,4 +16,4 @@ const Logo = () => {
     );
 };
 
-export default Logo;
+export default LogoContact;

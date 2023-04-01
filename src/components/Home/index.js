@@ -36,7 +36,6 @@ const Home = () => {
         <Loader type='pacman'/>
         </>
         
-        
         );
     
 };

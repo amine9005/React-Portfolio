@@ -1,0 +1,110 @@
+.projects-page{
+
+    font-size: 2rem;
+    color: #fff;
+    width: 104%;
+
+
+    .project-display{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 1rem;
+        opacity: 0;
+        animation: fadeIn 1.5s .5s forwards;
+
+        .leftBtn{
+
+          position: absolute;
+          left: 7%;
+          font-size: 6rem;
+          color: #fff;
+
+          &:hover{
+            left: 6%;
+            color: #ffd600;
+            font-size: 8rem;
+            cursor: pointer;
+          }
+        }
+
+        .rightBtn{
+          position: absolute;
+          right: 7%;
+          font-size: 6rem;
+          color: #fff;
+
+          &:hover{
+            right: 6%;
+            color: #ffd600;
+            font-size: 7rem;
+            cursor: pointer;
+          }
+        }
+
+        ul{
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            align-items: center;
+            /* container must wrap around the content*/
+            flex-wrap: wrap;
+            padding: 0;
+            margin: 0;
+          }
+          
+          ul li a{
+            height: 85vh;
+            width: 140vh;
+            border: 1px solid #ffd600;
+            background-color:#115173;
+            border-radius: 1rem;
+            margin: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            color:black;
+            text-decoration: none;
+            overflow-y: scroll;
+          }
+          
+          ul li a img{
+            max-width: 100%;
+            max-height: 62%;
+            min-width: 100%;
+            min-height: 62%;
+          }
+
+          .content-holder{
+            display: flex;
+            padding: 1rem;
+            width: 100%;
+
+            .description{
+              float: left;
+              width: 80%;
+              background-color: #ffd600;
+            }
+
+            .out-links{
+              margin: 0;
+              padding: 1rem 2rem 1rem 1rem;
+              display: flex;
+              flex-direction: column;
+              float: right;
+              max-height: 10rem;
+              width: 20%;
+
+              .source{
+                display: flex;
+                justify-content: space-between;
+              }
+            }
+          }
+
+
+    }
+}
