@@ -6,6 +6,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Projects from './components/Projects';
 import Certifs from './components/Certifs';
+import ProjectPage from './components/Project-Page';
 
 function App() {
   return (
@@ -15,7 +16,9 @@ function App() {
           <Route index element={<Home/>}/>
           <Route path='about' element={<About/>}/>
           <Route path='contact' element={<Contact/>}/>
-          <Route path='projects' element={<Projects/>}/>
+          <Route path='projects' element={<Projects/>}>
+            <Route path='1'  element={<ProjectPage/>}/>
+          </Route>
           <Route path='certifs' element={<Certifs/>}/>
         </Route>
         

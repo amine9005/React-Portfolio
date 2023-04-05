@@ -11,7 +11,7 @@ const YoutubeEmbed = ({embedId}) => {
             width='800px'
             height='300px'
             src={`https://www.youtube.com/embed/${embedId}`}
-            allow = "acceleromter"
+            
             allowFullScreen
             title='Embeded Youtube Video'
         />
