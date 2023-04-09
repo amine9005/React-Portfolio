@@ -1,0 +1,74 @@
+.project-page{
+    position: absolute;
+    left: 6%;
+    font-size: 2rem;
+    color: #fff;
+    max-width: 90%;
+    margin: 2rem;
+
+
+    .display{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+      
+      
+    .YT_video{
+        /* help resizing the image to fit with details css class */
+        flex: 1 0;
+        margin: 1rem;
+        max-width: 80%;
+        max-height: 80%;
+    }
+      
+    .details{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex: 1 0;
+        border-radius: 3rem;
+        padding: 2rem;
+        color: #fff;
+
+        .title{
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .live{
+            display: flex;
+            justify-content: space-between;
+            text-decoration: none;
+            font-size: 2rem;
+            color: #0055ff;
+            margin-bottom: 1rem;
+            transition: .2s;
+            &:link{
+                color: inherit;
+            }
+
+            
+        }
+
+        .tag{
+            border-radius: 1rem;
+            padding: .5rem;
+            background-color: #bfbfbf;
+            font-size: 1rem;
+        }
+
+        .desc{
+            justify-content: center;
+            font-size: 1rem;
+        }
+    
+    }
+      
+    
+
+}

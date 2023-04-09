@@ -3,10 +3,6 @@ import './index.scss'
 
 import React, { useEffect, useState } from 'react'
 import Loader from 'react-loaders'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGlobe } from '@fortawesome/free-solid-svg-icons'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import YoutubeEmbed from '../YoutubeEmbed'
 import db from '../../firebase'
 import { collection, onSnapshot } from '@firebase/firestore'
 import { Link } from 'react-router-dom'
@@ -34,7 +30,7 @@ const Projects =  () => {
       {projects.map((project) => (
 
         <li>
-          <Link className='linker' to='/'>
+          <Link className='linker' to={'/project/'+project.id}>
 
             {/* <YoutubeEmbed embedId={project.YoutubeLink}/> */}
 
