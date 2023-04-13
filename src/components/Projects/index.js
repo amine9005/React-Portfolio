@@ -51,25 +51,7 @@ const Projects =  () => {
               
               
             </div>
-            {/* <div className="content-holder">
-                <div className='description'>
-                  {project.description}
-                </div>
-
-                <div className='out-links'>
-                  { project.isLive &&
-                    <a target='_blank' href={project.liveLink} className='source'>
-                      <span>live</span>  
-                      <FontAwesomeIcon icon={faGlobe}/> 
-                    </a>
-                  }
-                  
-                  <a target='_blank' href={project.source} className='source'>
-                    <span>source</span>  
-                    <FontAwesomeIcon icon={faGithub}/>
-                  </a>
-                </div>
-            </div> */}
+           
           </Link>
         </li>
         

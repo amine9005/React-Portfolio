@@ -69,22 +69,18 @@ const ProjectPage = () => {
                 
               </div>
 
-              <div>
-                Technologies: {
-                  project.techs.forEach(element => {
-                    <div className='tag'>
-                      {element}
-                    </div>
-                  })
-                }
+              <div className='tags' >
+                  {
+                    project.techs.map((element) => (
+                      <div className='tag'>
+                        {element}
+                      </div>
+                    ))
+                  }   
               </div>
 
-              
-
-              
-
               <div className='desc'>
-                HELlo HELOO HELLO
+                {project.description}
               </div>
             </div>
 
