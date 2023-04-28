@@ -18,8 +18,6 @@ const Projects =  () => {
     } )
   })
 
-
-  
   return (
     <>
     <div className='container projects-page'>
@@ -47,25 +45,17 @@ const Projects =  () => {
                 <span className='tag'>{project.tag2}</span>
                 <span className='tag'>{project.tag3}</span>
               </p>
-              
-              
-              
             </div>
            
           </Link>
-        </li>
-        
+        </li>   
       ))}
-
         </ul>  
       </div>
 
     </div>
     <Loader type='pacman'/>
     </>
-    
-
-    
   )
 }
 

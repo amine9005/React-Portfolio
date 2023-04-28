@@ -6,8 +6,28 @@
     max-width: 90%;
     margin: 2rem;
 
-    .page{
-        
+    .wrapper{
+        position: absolute;
+        display: flex;
+        bottom: 0;
+        width: 80%;
+        max-width: 80%;
+
+        .carousel{
+            white-space: nowrap;
+
+            img{
+                height: 15rem;
+                object-fit: cover;
+                width: calc(100% / 3);
+
+                &:first-child{
+                    margin-left: 0;
+                }
+            }
+
+        }
+ 
     }
 
     .display{

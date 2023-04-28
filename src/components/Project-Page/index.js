@@ -84,12 +84,29 @@ const ProjectPage = () => {
               </div>
             </div>
 
+            
+
           </div>
+              :''}  
+          {project ? 
+          <div className='wrapper'>
+            <div className='carousel'>
+              <img src={  require("../../"+project.image1)} alt={project.image1}/>
+              <img src={  require("../../"+project.image1)} alt={project.image1}/>
+              <img src={  require("../../"+project.image1)} alt={project.image1}/>
+              <img src={  require("../../"+project.image1)} alt={project.image1}/>
+              <img src={  require("../../"+project.image1)} alt={project.image1}/>
+              <img src={  require("../../"+project.image1)} alt={project.image1}/>
+              <img src={  require("../../"+project.image1)} alt={project.image1}/>
+              <img src={  require("../../"+project.image1)} alt={project.image1}/>
+              <img src={  require("../../"+project.image1)} alt={project.image1}/>
 
 
-              :''}
-        
-      
+            </div>
+            
+          </div>
+          
+        :''}    
     </div>
   )
 }
