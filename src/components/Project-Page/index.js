@@ -5,7 +5,7 @@ import db from '../../firebase'
 import { useParams } from 'react-router'
 import YoutubeEmbed from '../YoutubeEmbed'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGlobe } from '@fortawesome/free-solid-svg-icons'
+import { faCircleArrowLeft, faCircleArrowRight, faGlobe } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 const ProjectPage = () => {
@@ -90,6 +90,7 @@ const ProjectPage = () => {
               :''}  
           {project ? 
           <div className='wrapper'>
+            <FontAwesomeIcon icon={faCircleArrowLeft} className='arrow-left'/>
             <div className='carousel'>
               <img src={  require("../../"+project.image1)} alt={project.image1}/>
               <img src={  require("../../"+project.image1)} alt={project.image1}/>
@@ -100,9 +101,8 @@ const ProjectPage = () => {
               <img src={  require("../../"+project.image1)} alt={project.image1}/>
               <img src={  require("../../"+project.image1)} alt={project.image1}/>
               <img src={  require("../../"+project.image1)} alt={project.image1}/>
-
-
             </div>
+          <FontAwesomeIcon icon={faCircleArrowRight} className='arrow-right'/>
             
           </div>
           

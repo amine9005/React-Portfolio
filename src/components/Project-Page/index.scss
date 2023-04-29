@@ -10,19 +10,47 @@
         position: absolute;
         display: flex;
         bottom: 0;
-        width: 80%;
-        max-width: 80%;
+        width: 100%;
+        max-width: 100%;
+
+        .arrow-left{
+            position: absolute;
+            font-size: 3.5rem;
+            cursor: pointer;
+            left: 0;
+            top:40%;
+        }
+
+        .arrow-right{
+            position: absolute;
+            font-size: 3.5rem;
+            cursor: pointer;
+            right: 0;
+            top:40%;
+        }
+
 
         .carousel{
+            width: 90%;
+            margin-left: auto ;
+            margin-right: auto;
             white-space: nowrap;
+            cursor: pointer;
+            overflow: hidden;
 
             img{
+                margin-left: .5rem;
                 height: 15rem;
                 object-fit: cover;
-                width: calc(100% / 3);
+                width: calc(100% / 4);
+                border-radius: 1rem;
 
                 &:first-child{
                     margin-left: 0;
+                }
+                &:hover{
+                    border: 2px solid #ffD600;
+                    border-radius: 1rem;
                 }
             }
 
