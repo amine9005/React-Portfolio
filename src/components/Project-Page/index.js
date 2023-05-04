@@ -12,15 +12,15 @@ const ProjectPage = () => {
 
   const [projects , setProjects] = useState([])
   const [project , setProject] = useState()
+  const [selected,setSelected] = useState()
+  const [isPicture,setIsPicture] = useState(false)
   const {projectId} = useParams()
 
   useEffect( () => {
     onSnapshot(collection(db,"Projects") , async (snapshot) => {
       setProjects(snapshot.docs.map((doc) => doc.data()
       ))
-      
       projects.forEach(pro => {
-        
         if (pro.id === projectId){
           setProject(pro)
         }
@@ -29,16 +29,69 @@ const ProjectPage = () => {
     
   })
 
+  function updateLeftPanel(path,is_picture){
+    setIsPicture(is_picture)
+    setSelected(path)
+  }
+
+  const carousel = document.querySelector('.carousel')
+
+  let isDragStart = false
+  let prevPageX = null
+  let prevScrollLeft = null
+
+  const dragStart = (e) =>{
+    isDragStart = true
+    prevPageX = e.pageX
+    prevScrollLeft = carousel.scrollLeft
+
+  }
+  
+  const dragEnd = () => {
+    isDragStart = false
+  }
+
+  const dragging = (e) => {
+    if(!isDragStart) {
+      return
+    }
+    e.preventDefault()
+    let positionDiff = e.pageX - prevPageX
+    carousel.scrollLeft =  prevScrollLeft - positionDiff
+  }
+
+  if (carousel) {
+    carousel.addEventListener("mousedown",dragStart)
+    carousel.addEventListener("mousemove",dragging)
+    carousel.addEventListener("mouseup",dragEnd)
+  }
+
+  
+  const firstImg = carousel ? carousel.querySelectorAll("img")[0] : null
+  let firstImgWidth = firstImg? firstImg.clientWidth + 18 : null
+
+
+  function movePictures(id){
+    carousel.scrollLeft += id==='left'? -firstImgWidth:firstImgWidth 
+    console.log("clicking "+id)
+  }
 
   return (
 
     <div className='container project-page' >
          {project ? 
          <div className='display'>
-
-            <div className='YT_video'>
+            {isPicture ? 
+            
+            <div className='left_panel'>
+              <img className='left_panel' src={  require("../../"+selected)} alt={selected}/>
+            </div>
+            :
+            <div className='left_panel'>
               <YoutubeEmbed  embedId="NVXgPsK_eTw"/>
             </div>
+            }
+            
 
             <div className='details' >
               <div className='title'>
@@ -84,15 +137,18 @@ const ProjectPage = () => {
               </div>
             </div>
 
-            
-
           </div>
               :''}  
           {project ? 
           <div className='wrapper'>
-            <FontAwesomeIcon icon={faCircleArrowLeft} className='arrow-left'/>
-            <div className='carousel'>
-              <img src={  require("../../"+project.image1)} alt={project.image1}/>
+            <FontAwesomeIcon id='left' icon={faCircleArrowLeft} className='arrow-left'
+              onClick={(event) => movePictures(event.target.id)}
+            />
+            <div className='carousel' >
+              
+              <img src={  require("../../"+project.image1)} alt={project.image1}
+                onClick={(event) => updateLeftPanel(project.image1,true)}
+              />
               <img src={  require("../../"+project.image1)} alt={project.image1}/>
               <img src={  require("../../"+project.image1)} alt={project.image1}/>
               <img src={  require("../../"+project.image1)} alt={project.image1}/>
@@ -102,7 +158,9 @@ const ProjectPage = () => {
               <img src={  require("../../"+project.image1)} alt={project.image1}/>
               <img src={  require("../../"+project.image1)} alt={project.image1}/>
             </div>
-          <FontAwesomeIcon icon={faCircleArrowRight} className='arrow-right'/>
+          <FontAwesomeIcon id='right' icon={faCircleArrowRight} className='arrow-right'
+            onClick={(event)=>movePictures(event.target.id)}
+          />
             
           </div>
           

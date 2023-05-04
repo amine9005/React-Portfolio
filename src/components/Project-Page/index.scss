@@ -37,6 +37,7 @@
             white-space: nowrap;
             cursor: pointer;
             overflow: hidden;
+            scroll-behavior: smooth;
 
             img{
                 margin-left: .5rem;
@@ -65,13 +66,15 @@
         align-items: center;
     }
       
-    .YT_video{
+    .left_panel{
         /* help resizing the image to fit with details css class */
         flex: 1 0;
         margin: 1rem;
-        max-width: 80%;
-        max-height: 80%;
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 1rem;
     }
+
       
     .details{
         width: 100%;
