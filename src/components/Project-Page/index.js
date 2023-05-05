@@ -70,11 +70,31 @@ const ProjectPage = () => {
   const firstImg = carousel ? carousel.querySelectorAll("img")[0] : null
   let firstImgWidth = firstImg? firstImg.clientWidth + 18 : null
 
+  const left = document.querySelector(".arrow-left")
+  const right = document.querySelector(".arrow-right")
+
+  const showHideIcon = () => {
+    if (carousel){
+      let scrollWidth = carousel.scrollWidth - carousel.clientWidth
+      console.log("Scroll Width: "+scrollWidth)
+      left.style.display = carousel.scrollLeft === 0 ? "none" : "block"
+      let image = document.querySelector(".carousel-img")
+      right.style.display = carousel.scrollLeft >= (scrollWidth - 30) ? "none": "block"
+
+      console.log("Scroll Left: "+(carousel.scrollLeft - 1))
+
+      
+    
+    }
+  }
+
 
   function movePictures(id){
     carousel.scrollLeft += id==='left'? -firstImgWidth:firstImgWidth 
-    console.log("clicking "+id)
+    showHideIcon()
   }
+
+
 
   return (
 
@@ -142,11 +162,11 @@ const ProjectPage = () => {
           {project ? 
           <div className='wrapper'>
             <FontAwesomeIcon id='left' icon={faCircleArrowLeft} className='arrow-left'
-              onClick={(event) => movePictures(event.target.id)}
+              onClick={(event) => movePictures('left')}
             />
             <div className='carousel' >
               
-              <img src={  require("../../"+project.image1)} alt={project.image1}
+              <img className='carousel-img' src={  require("../../"+project.image1)} alt={project.image1}
                 onClick={(event) => updateLeftPanel(project.image1,true)}
               />
               <img src={  require("../../"+project.image1)} alt={project.image1}/>
@@ -159,7 +179,7 @@ const ProjectPage = () => {
               <img src={  require("../../"+project.image1)} alt={project.image1}/>
             </div>
           <FontAwesomeIcon id='right' icon={faCircleArrowRight} className='arrow-right'
-            onClick={(event)=>movePictures(event.target.id)}
+            onClick={(event)=>movePictures('right')}
           />
             
           </div>
