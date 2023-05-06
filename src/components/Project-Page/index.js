@@ -7,6 +7,10 @@ import YoutubeEmbed from '../YoutubeEmbed'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleArrowLeft, faCircleArrowRight, faGlobe } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
 
 const ProjectPage = () => {
 
@@ -34,66 +38,27 @@ const ProjectPage = () => {
     setSelected(path)
   }
 
-  const carousel = document.querySelector('.carousel')
-
-  let isDragStart = false
-  let prevPageX = null
-  let prevScrollLeft = null
-
-  const dragStart = (e) =>{
-    isDragStart = true
-    prevPageX = e.pageX
-    prevScrollLeft = carousel.scrollLeft
-
-  }
   
-  const dragEnd = () => {
-    isDragStart = false
-  }
 
-  const dragging = (e) => {
-    if(!isDragStart) {
-      return
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1
     }
-    e.preventDefault()
-    let positionDiff = e.pageX - prevPageX
-    carousel.scrollLeft =  prevScrollLeft - positionDiff
-  }
-
-  if (carousel) {
-    carousel.addEventListener("mousedown",dragStart)
-    carousel.addEventListener("mousemove",dragging)
-    carousel.addEventListener("mouseup",dragEnd)
-  }
-
-  
-  const firstImg = carousel ? carousel.querySelectorAll("img")[0] : null
-  let firstImgWidth = firstImg? firstImg.clientWidth + 18 : null
-
-  const left = document.querySelector(".arrow-left")
-  const right = document.querySelector(".arrow-right")
-
-  const showHideIcon = () => {
-    if (carousel){
-      let scrollWidth = carousel.scrollWidth - carousel.clientWidth
-      console.log("Scroll Width: "+scrollWidth)
-      left.style.display = carousel.scrollLeft === 0 ? "none" : "block"
-      let image = document.querySelector(".carousel-img")
-      right.style.display = carousel.scrollLeft >= (scrollWidth - 30) ? "none": "block"
-
-      console.log("Scroll Left: "+(carousel.scrollLeft - 1))
-
-      
-    
-    }
-  }
-
-
-  function movePictures(id){
-    carousel.scrollLeft += id==='left'? -firstImgWidth:firstImgWidth 
-    showHideIcon()
-  }
-
+  };
 
 
   return (
@@ -104,15 +69,18 @@ const ProjectPage = () => {
             {isPicture ? 
             
             <div className='left_panel'>
+              <Popup className='popup' trigger={
               <img className='left_panel' src={  require("../../"+selected)} alt={selected}/>
+              } modal>
+                <img className='imgPopUp' src={  require("../../"+selected)} alt={selected}/>
+              </Popup>
             </div>
             :
             <div className='left_panel'>
-              <YoutubeEmbed  embedId="NVXgPsK_eTw"/>
+              <YoutubeEmbed  embedId={project.YoutubeLink}/>
             </div>
             }
             
-
             <div className='details' >
               <div className='title'>
                 {project.title}
@@ -160,28 +128,21 @@ const ProjectPage = () => {
           </div>
               :''}  
           {project ? 
-          <div className='wrapper'>
-            <FontAwesomeIcon id='left' icon={faCircleArrowLeft} className='arrow-left'
-              onClick={(event) => movePictures('left')}
-            />
-            <div className='carousel' >
+          <div >
+            <Carousel className="carousel" responsive={responsive}>
+              <img  src={  require("../../"+project.image1)} alt={project.image1} 
+              onClick={(event) => updateLeftPanel(project.image1,false)}/>
+
+              <img  src={  require("../../"+project.image1)} alt={project.image1} 
+              onClick={(event) => updateLeftPanel(project.image1,true)}/>
+              {
+                project.images.map((image) => (
+                  <img  src={  require("../../"+image)} alt={image} 
+                  onClick={(event) => updateLeftPanel(image,true)}/>
+                ))
+              }
               
-              <img className='carousel-img' src={  require("../../"+project.image1)} alt={project.image1}
-                onClick={(event) => updateLeftPanel(project.image1,true)}
-              />
-              <img src={  require("../../"+project.image1)} alt={project.image1}/>
-              <img src={  require("../../"+project.image1)} alt={project.image1}/>
-              <img src={  require("../../"+project.image1)} alt={project.image1}/>
-              <img src={  require("../../"+project.image1)} alt={project.image1}/>
-              <img src={  require("../../"+project.image1)} alt={project.image1}/>
-              <img src={  require("../../"+project.image1)} alt={project.image1}/>
-              <img src={  require("../../"+project.image1)} alt={project.image1}/>
-              <img src={  require("../../"+project.image1)} alt={project.image1}/>
-            </div>
-          <FontAwesomeIcon id='right' icon={faCircleArrowRight} className='arrow-right'
-            onClick={(event)=>movePictures('right')}
-          />
-            
+            </Carousel>
           </div>
           
         :''}    

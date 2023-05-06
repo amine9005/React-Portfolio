@@ -6,59 +6,36 @@
     max-width: 90%;
     margin: 2rem;
 
-    .wrapper{
-        position: absolute;
+    .popup{
         display: flex;
-        bottom: 0;
-        width: 100%;
-        max-width: 100%;
-
-        .arrow-left{
-            position: absolute;
-            font-size: 3.5rem;
-            cursor: pointer;
-            left: 0;
-            top:40%;
-            display: none;
+        object-fit: contain;
+        .imgPopUp{
+            max-width: 5rem;
+            max-height: 5rem;
+            height: 5rem;
+            width: 5rem;
         }
-
-        .arrow-right{
-            position: absolute;
-            font-size: 3.5rem;
-            cursor: pointer;
-            right: 0;
-            top:40%;
-        }
-
-
-        .carousel{
-            width: 90%;
-            margin-left: auto ;
-            margin-right: auto;
-            white-space: nowrap;
-            cursor: pointer;
-            overflow: hidden;
-            scroll-behavior: smooth;
-
-            img{
-                margin-left: .5rem;
-                height: 15rem;
-                object-fit: cover;
-                width: calc(100% / 4);
-                border-radius: 1rem;
-
-                &:first-child{
-                    margin-left: 0;
-                }
-                &:hover{
-                    border: 2px solid #ffD600;
-                    border-radius: 1rem;
-                }
-            }
-
-        }
- 
     }
+
+    .carousel{
+        img{
+            height: 15rem;
+            object-fit: cover;
+            width: 96%;
+            border-radius: 1rem;
+             
+
+            &:first-child{
+                margin-left: 0;
+            }
+            &:hover{
+                border: 2px solid #ffD600;
+            }
+        }
+        
+    }
+
+
 
     .display{
         display: flex;
