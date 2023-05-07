@@ -68,6 +68,7 @@ const ProjectPage = () => {
          <div className='display'>
             {isPicture ? 
             
+            
             <div className='left_panel'>
               <Popup className='popup' trigger={
               <img className='left_panel' src={  require("../../"+selected)} alt={selected}/>
