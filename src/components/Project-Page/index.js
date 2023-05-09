@@ -9,8 +9,9 @@ import { faCircleArrowLeft, faCircleArrowRight, faGlobe } from '@fortawesome/fre
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
+import ModalImage from "react-modal-image";
+
 
 const ProjectPage = () => {
 
@@ -70,11 +71,15 @@ const ProjectPage = () => {
             
             
             <div className='left_panel'>
-              <Popup className='popup' trigger={
-              <img className='left_panel' src={  require("../../"+selected)} alt={selected}/>
-              } modal>
-                <img className='imgPopUp' src={  require("../../"+selected)} alt={selected}/>
-              </Popup>
+
+              <ModalImage
+                small={require("../../"+selected)}
+                large={require("../../"+selected)}
+                hideZoom={true}
+                hideDownload={true}
+                imageBackgroundColor="hotpink"
+              />
+              
             </div>
             :
             <div className='left_panel'>
