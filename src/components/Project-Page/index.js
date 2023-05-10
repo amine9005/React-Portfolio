@@ -5,7 +5,7 @@ import db from '../../firebase'
 import { useParams } from 'react-router'
 import YoutubeEmbed from '../YoutubeEmbed'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircleArrowLeft, faCircleArrowRight, faGlobe } from '@fortawesome/free-solid-svg-icons'
+import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -77,7 +77,6 @@ const ProjectPage = () => {
                 large={require("../../"+selected)}
                 hideZoom={true}
                 hideDownload={true}
-                imageBackgroundColor="hotpink"
               />
               
             </div>

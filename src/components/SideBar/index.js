@@ -6,44 +6,54 @@ import SubLogo from '../../assets/logo/Sub_Logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faEnvelope, faHome,faSackDollar,faTrophy,faUser} from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import Navbar from 'react-bootstrap/Navbar';
 
 const SideBar  = () => {
-    return <div className='nav-bar'>
+    return <Navbar className='nav-bar'>
             <Link className='logo' to='/'>
                 <img src={LogoM} alt='logo'/>
                 <img src={SubLogo} alt='Mohamed Amine'/>
             </Link>
             <nav>
-                <NavLink exact="true" activeclassname="active" to='/'>
+                <NavLink 
+                    exact="true"
+                    className="nav-btn" 
+                    activeclassname="active" 
+                    to='/'>
                     <FontAwesomeIcon icon={faHome} color="#4d4d4e"/>
+                    Home
                 </NavLink>
                 <NavLink 
-                    exact="true" 
+                    exact="true"
+                    className="nav-btn" 
                     activeclassname="active" 
-                    className="about-link"
                     to='/about'>
                     <FontAwesomeIcon icon={faUser} color="#4d4d4e"/>
+                    About
                 </NavLink>
                 <NavLink 
-                    exact="true" 
+                    exact="true"
+                    className="nav-btn" 
                     activeclassname="active" 
-                    className="projects-link"
                     to='/projects'>
                     <FontAwesomeIcon icon={faSackDollar} color="#4d4d4e"/>
+                    Projects
                 </NavLink>
                 <NavLink 
-                    exact="true" 
+                    exact="true"
+                    className="nav-btn" 
                     activeclassname="active" 
-                    className="certifications-link"
                     to='/certifs'>
                     <FontAwesomeIcon icon={faTrophy} color="#4d4d4e"/>
+                    CERTIFs
                 </NavLink>
                 <NavLink 
-                    exact="true" 
+                    exact="true"
+                    className="nav-btn" 
                     activeclassname="active" 
-                    className="contact-link"
                     to='/contact'>
                     <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e"/>
+                    Contact
                 </NavLink>
             </nav>
             <ul>
@@ -75,7 +85,7 @@ const SideBar  = () => {
                 </li>
             </ul>
 
-        </div>
+        </Navbar>
 }
 
 export default SideBar
