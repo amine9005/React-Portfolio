@@ -3,8 +3,8 @@
     width: 32rem;
     height: 32rem;
     position:absolute;
-    top: 50%;
-    right: 12%;
+    top: 30%;
+    right: 8%;
     bottom: 0;
     left: auto;
     margin: auto;
@@ -75,5 +75,288 @@
         }
     }
       
+}
 
+@media (max-width:1310px) {
+    .logo-container{
+        right: 4%;
+    }
+}
+
+@media (max-width:1200px) {
+    .logo-container{
+        right: 2%;
+        width: 32rem;
+        height: 32rem;
+
+        .outer-circle{
+            width: 28rem;
+            height: 28rem;
+
+            .inner-circle{
+                width: 28rem;
+                height: 28rem;
+            }
+        }
+    
+        .solid-logo{
+            width: 28rem;
+            height: 28rem;
+        }
+    }
+    
+}
+
+
+@media (max-width:1055px) {
+    .logo-container{
+        top: 50%;
+        right: -8%;
+        width: 36rem;
+        height: 36rem;
+
+        .outer-circle{
+            width: 25rem;
+            height: 25rem;
+
+            .inner-circle{
+                width: 25rem;
+                height: 25rem;
+            }
+        }
+    
+        .solid-logo{
+            width: 25rem;
+            height: 25rem;
+        }
+    }
+    
+}
+
+
+
+
+
+@media (max-width:1000px) {
+    .logo-container{
+        right: 0;
+        top: 30%;
+        width: 36rem;
+        height: 36rem;
+        left: -2.5rem;
+        margin: auto;
+        animation: fadeIn .5s 0s forwards;
+
+
+        .outer-circle{
+            width: 36rem;
+            height: 36rem;
+
+            .inner-circle{
+                width: 36rem;
+                height: 36rem;
+            }
+        }
+    
+        .solid-logo{
+            width: 36rem;
+            height: 36rem;
+        }
+    }
+    
+}
+
+
+@media (max-width:700px) {
+    .logo-container{
+        right: 0;
+        top: 20%;
+        width: 32rem;
+        height: 32rem;
+        left: -2.5rem;
+        margin: auto;
+
+        .outer-circle{
+            width: 32rem;
+            height: 32rem;
+
+            .inner-circle{
+                width: 32rem;
+                height: 32rem;
+            }
+        }
+    
+        .solid-logo{
+            width: 32rem;
+            height: 32rem;
+        }
+    }
+    
+}
+
+
+@media (max-width:550px) {
+    .logo-container{
+        right: 0;
+        top: 10%;
+        width: 28rem;
+        height: 28rem;
+        left: -2.5rem;
+        margin: auto;
+
+        .outer-circle{
+            width: 28rem;
+            height: 28rem;
+
+            .inner-circle{
+                width: 28rem;
+                height: 28rem;
+            }
+        }
+    
+        .solid-logo{
+            width: 28rem;
+            height: 28rem;
+        }
+    }
+    
+}
+
+
+@media (max-width:470px) {
+    .logo-container{
+        right: 0;
+        top: 0%;
+        width: 24rem;
+        height: 24rem;
+        left: -2.5rem;
+        margin: auto;
+
+        .outer-circle{
+            width: 24rem;
+            height: 24rem;
+
+            .inner-circle{
+                width: 24rem;
+                height: 24rem;
+            }
+        }
+    
+        .solid-logo{
+            width: 24rem;
+            height: 24rem;
+        }
+    }
+    
+}
+
+@media (max-width:400px) {
+    .logo-container{
+        right: 0;
+        top: -20%;
+        width: 20rem;
+        height: 20rem;
+        left: -2.5rem;
+        margin: auto;
+
+        .outer-circle{
+            width: 20rem;
+            height: 20rem;
+
+            .inner-circle{
+                width: 20rem;
+                height: 20rem;
+            }
+        }
+    
+        .solid-logo{
+            width: 20rem;
+            height: 20rem;
+        }
+    }
+    
+}
+
+
+@media (max-width:345px) {
+    .logo-container{
+        right: 0;
+        top: -25%;
+        width: 18rem;
+        height: 18rem;
+        left: -2.5rem;
+        margin: auto;
+
+        .outer-circle{
+            width: 18rem;
+            height: 18rem;
+
+            .inner-circle{
+                width: 18rem;
+                height: 18rem;
+            }
+        }
+    
+        .solid-logo{
+            width: 18rem;
+            height: 18rem;
+        }
+    }
+    
+}
+
+
+@media (max-width:310px) {
+    .logo-container{
+        right: 0;
+        top: -35%;
+        width: 15rem;
+        height: 15rem;
+        left: -2.5rem;
+        margin: auto;
+
+        .outer-circle{
+            width: 15rem;
+            height: 15rem;
+
+            .inner-circle{
+                width: 15rem;
+                height: 15rem;
+            }
+        }
+    
+        .solid-logo{
+            width: 15rem;
+            height: 15rem;
+        }
+    }
+    
+}
+
+
+@media (max-width:260px) {
+    .logo-container{
+        right: 0;
+        top: -45%;
+        width: 12rem;
+        height: 12rem;
+        left: -2.5rem;
+        margin: auto;
+
+        .outer-circle{
+            width: 12rem;
+            height: 12rem;
+
+            .inner-circle{
+                width: 12rem;
+                height: 12rem;
+            }
+        }
+    
+        .solid-logo{
+            width: 12rem;
+            height: 12rem;
+        }
+    }
+    
 }

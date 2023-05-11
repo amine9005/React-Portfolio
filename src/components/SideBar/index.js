@@ -1,6 +1,6 @@
 import './index.scss';
 import { Link, NavLink } from 'react-router-dom'
-
+import { useRef } from 'react';
 import LogoM from '../../assets/logo/logo.png'
 import SubLogo from '../../assets/logo/Sub_Logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,7 +9,13 @@ import { faFacebook, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-i
 import Navbar from 'react-bootstrap/Navbar';
 
 const SideBar  = () => {
-    return <Navbar className='nav-bar'>
+    const navRef = useRef()
+    const showNavBar = () => {
+        navRef.current.classList.toggle("responsive_nav")
+    }
+
+
+    return <Navbar ref={navRef} className='nav-bar'>
             <Link className='logo' to='/'>
                 <img src={LogoM} alt='logo'/>
                 <img src={SubLogo} alt='Mohamed Amine'/>
