@@ -1,26 +1,28 @@
 import './index.scss';
 import { Link, NavLink } from 'react-router-dom'
-import { useRef } from 'react';
+import { useState } from 'react';
 import LogoM from '../../assets/logo/logo.png'
 import SubLogo from '../../assets/logo/Sub_Logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faEnvelope, faHome,faSackDollar,faTrophy,faUser} from '@fortawesome/free-solid-svg-icons';
+import {faBars, faEnvelope, faHome,faSackDollar,faTimes,faTrophy,faUser} from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import Navbar from 'react-bootstrap/Navbar';
 
 const SideBar  = () => {
-    const navRef = useRef()
+    const [menu_btn,set_menu_btn] = useState(true)
     const showNavBar = () => {
-        navRef.current.classList.toggle("responsive_nav")
+        set_menu_btn(!menu_btn )
     }
 
 
-    return <Navbar ref={navRef} className='nav-bar'>
+
+    return <Navbar  className={menu_btn? 'nav-bar':"nav-bar expand"}>
             <Link className='logo' to='/'>
                 <img src={LogoM} alt='logo'/>
                 <img src={SubLogo} alt='Mohamed Amine'/>
             </Link>
-            <nav>
+            <div className={menu_btn ? 'nav-callopse':'nav-callopse show'}>
+            <nav >
                 <NavLink 
                     exact="true"
                     className="nav-btn" 
@@ -90,6 +92,14 @@ const SideBar  = () => {
                     </a>
                 </li>
             </ul>
+            </div>
+
+
+            <FontAwesomeIcon
+            className={menu_btn? "menu bars":"menu times" }
+            onClick={(event) => showNavBar()} 
+            icon={menu_btn? faBars : faTimes } color="#4d4d4e"/>
+            
 
         </Navbar>
 }

@@ -1,27 +1,47 @@
+.logo{
+    display: flex;
+    flex-wrap: wrap;       
+    margin-left: 2rem; 
+    img{
+        display: inline;
+        margin: .5rem auto;
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+
+
 .nav-bar{
     background-color: #181818;
     width: 100%;
-    height: 5rem;
     position: sticky;
     top: 0;
     min-height: 5rem;
     display: flex;
     flex-wrap: wrap;
     
+    .menu{
+        position: absolute;
+        margin-top: 1rem;
+        font-size: 3rem;
+        right: 2rem;
+        cursor: pointer;
+        display: none;
+    }
 
-    .logo{
-        display: flex;
-        flex-wrap: wrap;       
-        margin-left: 2rem; 
-        img{
-            display: inline;
-            margin: .5rem auto;
-            width: 5rem;
-            height: auto;
-        }
+    .menu.bars{
+        transform: rotate(-180deg);
+        transition: .2s;
+    }
+
+    .menu.times{
+        transform: rotate(180deg);
+        transition: .2s;
     }
 
     
+
     
 
     nav{
@@ -29,7 +49,7 @@
         flex-wrap: wrap;
         position: absolute;
         width: 100%;
-        margin-left: 15%;
+        margin-left: 2%;
         margin-top: .5rem;
 
         .nav-btn {
@@ -89,3 +109,58 @@
 }
 
 
+
+@media (max-width:1260px) {
+    .nav-bar{
+        .menu{
+            display: initial;
+        }
+
+        .nav-callopse{
+
+            // clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+            transition: .2s linear;
+            
+
+        }
+
+        .nav-callopse.show{
+            // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            transition: .2s linear;
+            width: 100%;
+            position: absolute;
+            display: flex;
+            flex-wrap: wrap;
+            flex-flow: column;
+            margin-left: auto;
+            margin-right: auto;
+            nav{
+                flex-flow: column;
+                
+
+            }
+        }
+
+        // nav{
+        //     flex-flow: column;
+        //     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        //     transition: .2s linear;
+        // }
+
+        // nav.show{
+        //     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        //     transition: .2s linear;
+        // }
+
+        // ul{
+        //     display: none;
+        // }
+        
+    }
+
+}
+
+.nav-bar.expand{
+    height: 20rem;
+}
