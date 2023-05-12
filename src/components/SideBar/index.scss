@@ -10,8 +10,6 @@
     }
 }
 
-
-
 .nav-bar{
     background-color: #181818;
     width: 100%;
@@ -20,6 +18,8 @@
     min-height: 5rem;
     display: flex;
     flex-wrap: wrap;
+    left: 0;
+    right: 0;
     
     .menu{
         position: absolute;
@@ -40,19 +40,15 @@
         transition: .2s;
     }
 
-    
-
-    
-
     nav{
         display: flex;
         flex-wrap: wrap;
         position: absolute;
         width: 100%;
         margin-left: 2%;
-        margin-top: .5rem;
+        margin-top: 1rem;
 
-        .nav-btn {
+        .nav-link {
             font-size: 2rem;
             color: #4d4d4e;
             margin-left:2rem;
@@ -68,7 +64,7 @@
             }
         }
     
-        .nav-btn.active{
+        .nav-link.active{
             svg{
                 color: #ffe600;
             }
@@ -115,52 +111,70 @@
         .menu{
             display: initial;
         }
-
-        .nav-callopse{
-
-            // clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-
-            transition: .2s linear;
-            
-
+        nav{
+            display: none;
+        }
+        ul{
+            display: none;
         }
 
-        .nav-callopse.show{
-            // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            transition: .2s linear;
-            width: 100%;
-            position: absolute;
-            display: flex;
-            flex-wrap: wrap;
-            flex-flow: column;
-            margin-left: auto;
-            margin-right: auto;
-            nav{
-                flex-flow: column;
-                
-
-            }
-        }
-
-        // nav{
-        //     flex-flow: column;
-        //     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-        //     transition: .2s linear;
-        // }
-
-        // nav.show{
-        //     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-        //     transition: .2s linear;
-        // }
-
-        // ul{
-        //     display: none;
-        // }
-        
     }
 
 }
 
 .nav-bar.expand{
-    height: 20rem;
+    height: 27.5rem;
+
+    nav{
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        flex-flow: column;
+        width: 108%;
+        left: -2.5rem;
+        top: 5.5rem;
+        .nav-link{
+            border-bottom: 1px solid #ffe600 ;
+            .nav-btn{
+                display: flex;
+                text-align: center;
+                justify-content: center;
+            }
+            
+           
+        }
+    }
+    .icons{
+        display: flex;
+        flex-flow: column;
+        flex-wrap: nowrap;
+        width: 100%;
+        
+    }
+    ul{
+        top: 23.5rem;
+        left: 0;
+        display: flex;
+        li{
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+
+@media (max-width:900px) {
+    .nav-bar.expand{
+
+        ul{
+            top: 23.5rem;
+            left: -1.5rem;
+            display: flex;
+            li{
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+    }
 }

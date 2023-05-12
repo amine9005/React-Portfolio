@@ -14,8 +14,6 @@ const SideBar  = () => {
         set_menu_btn(!menu_btn )
     }
 
-
-
     return <Navbar  className={menu_btn? 'nav-bar':"nav-bar expand"}>
             <Link className='logo' to='/'>
                 <img src={LogoM} alt='logo'/>
@@ -25,45 +23,60 @@ const SideBar  = () => {
             <nav >
                 <NavLink 
                     exact="true"
-                    className="nav-btn" 
+                    className="nav-link" 
                     activeclassname="active" 
                     to='/'>
-                    <FontAwesomeIcon icon={faHome} color="#4d4d4e"/>
-                    Home
+                        <div className='nav-btn'>
+                            <FontAwesomeIcon  icon={faHome} color="#4d4d4e"/>
+                            Home
+                        </div>
+                    
+                    
                 </NavLink>
                 <NavLink 
                     exact="true"
-                    className="nav-btn" 
+                    className="nav-link" 
                     activeclassname="active" 
                     to='/about'>
-                    <FontAwesomeIcon icon={faUser} color="#4d4d4e"/>
-                    About
+                    <div className='nav-btn'>
+                        <FontAwesomeIcon icon={faUser} color="#4d4d4e"/>
+                        About
+                    </div>
                 </NavLink>
                 <NavLink 
                     exact="true"
-                    className="nav-btn" 
+                    className="nav-link" 
                     activeclassname="active" 
                     to='/projects'>
-                    <FontAwesomeIcon icon={faSackDollar} color="#4d4d4e"/>
-                    Projects
+                    <div className='nav-btn'>
+                        <FontAwesomeIcon icon={faSackDollar} color="#4d4d4e"/>
+                        Projects
+                    </div>
                 </NavLink>
                 <NavLink 
                     exact="true"
-                    className="nav-btn" 
+                    className="nav-link" 
                     activeclassname="active" 
                     to='/certifs'>
-                    <FontAwesomeIcon icon={faTrophy} color="#4d4d4e"/>
-                    CERTIFs
+                    <div className='nav-btn'>
+                        <FontAwesomeIcon icon={faTrophy} color="#4d4d4e"/>
+                        CERTIFs
+                    </div>
                 </NavLink>
                 <NavLink 
                     exact="true"
-                    className="nav-btn" 
+                    className="nav-link" 
                     activeclassname="active" 
                     to='/contact'>
-                    <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e"/>
-                    Contact
+                    <div className='nav-btn'>
+                        <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e"/>
+                        Contact
+                    </div>
                 </NavLink>
             </nav>
+            <div className='icons'>
+
+            </div>
             <ul>
                 <li>
                     <a target="_blank" 
@@ -94,13 +107,11 @@ const SideBar  = () => {
             </ul>
             </div>
 
-
             <FontAwesomeIcon
             className={menu_btn? "menu bars":"menu times" }
             onClick={(event) => showNavBar()} 
             icon={menu_btn? faBars : faTimes } color="#4d4d4e"/>
             
-
         </Navbar>
 }
 
