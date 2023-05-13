@@ -42,6 +42,7 @@ export const About = () => {
 
         </div>
 
+        <div className='container-skills'>
         <div className='skills-bar-1'>
           <div className='skills-react'>
             <img className='reactIcon' src={reactIcon} alt='React'/>
@@ -73,6 +74,8 @@ export const About = () => {
             <img className='jsIcon' src={gitIcon} alt='Git'/>
           </div>
         </div>
+        </div>
+        
       </div>
       <Loader type='pacman'/>
     </>
