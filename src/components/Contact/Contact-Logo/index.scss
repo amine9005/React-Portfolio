@@ -2,15 +2,12 @@
     z-index: 0;
     width: 32rem;
     height: 32rem;
-    position:relative;
-    top: 5%;
-    right: 10%;
-    bottom: 0;
-    left: auto;
+    position:absolute;
+    right: 5%;
+    top: 12rem;
     margin: auto;
     opacity: 0;
     animation: fadeIn 3s 1s forwards;
-
     
     .outer-circle {
         background-image: linear-gradient(rgb(255, 179, 0), rgb(255, 221, 0), #f9ff3f);
@@ -35,7 +32,6 @@
             animation: rotateCircle 1.5s linear infinite reverse;
             text-align: center;
         }
-
     }
 
     .solid-logo{
@@ -50,7 +46,6 @@
         margin: auto;
         width: 100%;
         border-radius: 100rem;
-
     }
     
         @keyframes rotateCircle {
@@ -74,6 +69,165 @@
             transform: rotate(360deg);
         }
     }
-      
 
+}
+
+
+@media (max-width:1310px) {
+    .logo-container-contact{
+        right: 0%;
+        top: 15rem;
+        width: 32rem;
+        height: 32rem;
+
+        .outer-circle{
+            width: 28rem;
+            height: 28rem;
+
+            .inner-circle{
+                width: 28rem;
+                height: 28rem;
+            }
+        }
+    
+        .solid-logo{
+            width: 28rem;
+            height: 28rem;
+        }
+    }
+    
+}
+
+
+
+@media (max-width:1040px) {
+    .logo-container-contact{
+        right: -6%;
+        width: 32rem;
+        height: 32rem;
+
+        .outer-circle{
+            width: 24rem;
+            height: 24rem;
+
+            .inner-circle{
+                width: 24rem;
+                height: 24rem;
+            }
+        }
+    
+        .solid-logo{
+            width: 24rem;
+            height: 24rem;
+        }
+    }
+    
+}
+
+
+@media (max-width:940px) {
+    .logo-container-contact{
+        right: -14%;
+        // left: 5%;
+        width: 32rem;
+        height: 32rem;
+
+        .outer-circle{
+            width: 20rem;
+            height: 20rem;
+
+            .inner-circle{
+                width: 20rem;
+                height: 20rem;
+            }
+        }
+    
+        .solid-logo{
+            width: 20rem;
+            height: 20rem;
+        }
+    }
+    
+}
+
+
+
+@media (max-width:840px) {
+    .logo-container-contact{
+        right: -20%;
+        // left: 5%;
+        width: 32rem;
+        height: 32rem;
+
+        .outer-circle{
+            width: 20rem;
+            height: 20rem;
+
+            .inner-circle{
+                width: 20rem;
+                height: 20rem;
+            }
+        }
+    
+        .solid-logo{
+            width: 20rem;
+            height: 20rem;
+        }
+    }
+    
+}
+
+
+@media (max-width:740px) {
+    .logo-container-contact{
+
+        right: -30%;
+        // left: 5%;
+        width: 32rem;
+        height: 32rem;
+
+        .outer-circle{
+            width: 16rem;
+            height: 16rem;
+
+            .inner-circle{
+                width: 16rem;
+                height: 16rem;
+            }
+        }
+    
+        .solid-logo{
+            width: 16rem;
+            height: 16rem;
+        }
+    }
+    
+}
+
+
+@media (max-width:670px) {
+    .logo-container-contact{
+        display: none;
+
+        right: -30%;
+        // left: 5%;
+        width: 32rem;
+        height: 32rem;
+
+        .outer-circle{
+            width: 16rem;
+            height: 16rem;
+
+            .inner-circle{
+                width: 16rem;
+                height: 16rem;
+            }
+        }
+    
+        .solid-logo{
+            width: 16rem;
+            height: 16rem;
+        }
+    }
+    
 }

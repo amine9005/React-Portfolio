@@ -1,13 +1,13 @@
 .contact-page{
 
-    position: absolute;
+    position: relative;
     color: #fff;
     font-size: 2rem;
     margin-left: 2.5rem;
     // top: 50%;
     // transform: translateY(-50%);
-    width:40%;
-    max-height: 80%;
+    width:50%;
+    max-height: 100%;
     margin-top: 2rem;
     padding: 0;
 
@@ -77,8 +77,21 @@
         &:hover{
             cursor: pointer;
         }
-
-        
     }
+}
 
+@media (max-width:1310px) {
+
+    .contact-page{
+        width:110%;
+    }
+    
+}
+
+@media (max-width:670px) {
+
+    .contact-page{
+        width:200%;
+    }
+    
 }

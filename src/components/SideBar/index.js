@@ -53,7 +53,7 @@ const SideBar  = () => {
                         Projects
                     </div>
                 </NavLink>
-                <NavLink 
+                {/* <NavLink 
                     exact="true"
                     className="nav-link" 
                     activeclassname="active" 
@@ -62,7 +62,7 @@ const SideBar  = () => {
                         <FontAwesomeIcon icon={faTrophy} color="#4d4d4e"/>
                         CERTIFs
                     </div>
-                </NavLink>
+                </NavLink> */}
                 <NavLink 
                     exact="true"
                     className="nav-link" 
