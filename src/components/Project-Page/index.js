@@ -73,6 +73,7 @@ const ProjectPage = () => {
             <div className='left_panel'>
 
               <ModalImage
+                className='smallImg'
                 small={require("../../"+selected)}
                 large={require("../../"+selected)}
                 hideZoom={true}
@@ -119,7 +120,10 @@ const ProjectPage = () => {
                   {
                     project.techs.map((element) => (
                       <div className='tag'>
-                        {element}
+                        <span>
+                          {element}
+                        </span>
+                        
                       </div>
                     ))
                   }   
