@@ -137,12 +137,12 @@ const ProjectPage = () => {
           {project ? 
           <div >
             <Carousel className="carousel" responsive={responsive}>
-              <img  src={  require("../../"+project.image1)} alt={project.image1} 
+              <img  src={  require("../../"+project.vidPic)} alt={project.vidPic} 
               onClick={(event) => updateLeftPanel(project.YoutubeLink,false)}/>
 
               {project.Link2 ? 
                 
-                <img  src={  require("../../"+project.image1)} alt={project.image1} 
+                <img  src={  require("../../"+project.vidPic)} alt={project.vidPic} 
                 onClick={(event) => updateLeftPanel(project.YoutubeLink2,false)}/>
               :project.Link2} 
 
