@@ -17,11 +17,14 @@ const SideBar  = () => {
     return <Navbar  className={menu_btn? 'nav-bar':"nav-bar expand"}>
             <Link className='logo' to='/'>
                 <img src={LogoM} alt='logo'/>
-                <img src={SubLogo} alt='Mohamed Amine'/>
+                <img src={SubLogo} alt='Mohamed Amine'
+                onClick={(event) => showNavBar()}
+                />
             </Link>
             <div className={menu_btn ? 'nav-callopse':'nav-callopse show'}>
             <nav >
-                <NavLink 
+                <NavLink
+                    onClick={(event) => showNavBar()} 
                     exact="true"
                     className="nav-link" 
                     activeclassname="active" 
@@ -33,7 +36,8 @@ const SideBar  = () => {
                     
                     
                 </NavLink>
-                <NavLink 
+                <NavLink
+                onClick={(event) => showNavBar()} 
                     exact="true"
                     className="nav-link" 
                     activeclassname="active" 
@@ -43,7 +47,8 @@ const SideBar  = () => {
                         About
                     </div>
                 </NavLink>
-                <NavLink 
+                <NavLink
+                onClick={(event) => showNavBar()} 
                     exact="true"
                     className="nav-link" 
                     activeclassname="active" 
@@ -53,7 +58,8 @@ const SideBar  = () => {
                         Projects
                     </div>
                 </NavLink>
-                {/* <NavLink 
+                {/* <NavLink
+                onClick={(event) => showNavBar()} 
                     exact="true"
                     className="nav-link" 
                     activeclassname="active" 
@@ -63,7 +69,8 @@ const SideBar  = () => {
                         CERTIFs
                     </div>
                 </NavLink> */}
-                <NavLink 
+                <NavLink
+                onClick={(event) => showNavBar()} 
                     exact="true"
                     className="nav-link" 
                     activeclassname="active" 
