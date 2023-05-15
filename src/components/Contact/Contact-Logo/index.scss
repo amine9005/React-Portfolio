@@ -1,13 +1,14 @@
 .logo-container-contact{
     z-index: 0;
-    width: 32rem;
-    height: 32rem;
+    width: 35rem;
+    height: 35rem;
     position:absolute;
-    right: 5%;
+    right: 0%;
     top: 12rem;
     margin: auto;
     opacity: 0;
     animation: fadeIn 3s 1s forwards;
+    overflow: hidden;
     
     .outer-circle {
         background-image: linear-gradient(rgb(255, 179, 0), rgb(255, 221, 0), #f9ff3f);
