@@ -39,7 +39,6 @@ const ProjectPage = () => {
     setSelected(path)
   }
 
-  
 
   const responsive = {
     superLargeDesktop: {
@@ -69,7 +68,6 @@ const ProjectPage = () => {
          <div className='display'>
             {isPicture ? 
             
-            
             <div className='left_panel'>
 
               <ModalImage
@@ -81,9 +79,9 @@ const ProjectPage = () => {
               />
               
             </div>
-            :
+            : 
             <div className='left_panel'>
-              <YoutubeEmbed  embedId={project.YoutubeLink}/>
+              <YoutubeEmbed  embedId={selected? selected:project.YoutubeLink}/>
             </div>
             }
             
@@ -140,10 +138,17 @@ const ProjectPage = () => {
           <div >
             <Carousel className="carousel" responsive={responsive}>
               <img  src={  require("../../"+project.image1)} alt={project.image1} 
-              onClick={(event) => updateLeftPanel(project.image1,false)}/>
+              onClick={(event) => updateLeftPanel(project.YoutubeLink,false)}/>
+
+              {project.Link2 ? 
+                
+                <img  src={  require("../../"+project.image1)} alt={project.image1} 
+                onClick={(event) => updateLeftPanel(project.YoutubeLink2,false)}/>
+              :project.Link2} 
 
               <img  src={  require("../../"+project.image1)} alt={project.image1} 
               onClick={(event) => updateLeftPanel(project.image1,true)}/>
+
               {
                 project.images.map((image) => (
                   <img  src={  require("../../"+image)} alt={image} 

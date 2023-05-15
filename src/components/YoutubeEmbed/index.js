@@ -10,7 +10,8 @@ const YoutubeEmbed = ({embedId}) => {
         <iframe 
             width='800px'
             height='300px'
-            src={`https://www.youtube.com/embed/${embedId}`}
+            // src={`https://www.youtube.com/embed/${embedId}`}
+            src={`https://drive.google.com/file/d/${embedId}/preview`}
             
             allowFullScreen
             title='Embeded Youtube Video'
