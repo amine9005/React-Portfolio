@@ -22,9 +22,10 @@ const ProjectPage = () => {
   const {projectId} = useParams()
   const [carouselItems,setCarouselItems]  = useState([])
 
-  let carouselItemsList = []
 
   useEffect( () => {
+    let carouselItemsList = []
+
     onSnapshot(collection(db,"Projects") , async (snapshot) => {
       setProjects(snapshot.docs.map((doc) => doc.data()
       ))
@@ -68,7 +69,7 @@ const ProjectPage = () => {
 
     
     
-  })
+  },[project, projects, projectId, carouselItems.length] )
 
   function updateLeftPanel(path,is_picture){
     setIsPicture(is_picture)
