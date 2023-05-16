@@ -20,6 +20,9 @@ const ProjectPage = () => {
   const [selected,setSelected] = useState()
   const [isPicture,setIsPicture] = useState(false)
   const {projectId} = useParams()
+  const [carouselItems,setCarouselItems]  = useState([])
+
+  let carouselItemsList = []
 
   useEffect( () => {
     onSnapshot(collection(db,"Projects") , async (snapshot) => {
@@ -31,6 +34,39 @@ const ProjectPage = () => {
         }
       })
     } )
+
+    if (project){
+      if (carouselItems.length === 0){
+        carouselItemsList.push({
+          isPicture:false,
+          image:project.vidPic,
+          path:project.YoutubeLink
+        })
+  
+        if(project.Link2){
+          carouselItemsList.push({
+            isPicture:false,
+            image:project.vidPic,
+            path:project.YoutubeLink2
+          })
+        }
+  
+        project.images.map((image) => (
+          carouselItemsList.push({
+            isPicture:true,
+            image:image,
+            path:image
+          })
+          ))
+
+          setCarouselItems(carouselItemsList)
+      }
+      
+  
+        
+    }
+
+    
     
   })
 
@@ -40,8 +76,6 @@ const ProjectPage = () => {
   }
 
   
-
-
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -61,6 +95,8 @@ const ProjectPage = () => {
       items: 1
     }
   };
+
+  
 
 
   return (
@@ -136,10 +172,10 @@ const ProjectPage = () => {
 
           </div>
               :''}  
-          {project ? 
+          {carouselItems ? 
           <div >
             <Carousel className="carousel" responsive={responsive}>
-              <img  src={  require("../../"+project.vidPic)} alt={project.vidPic} 
+              {/* <img  src={  require("../../"+project.vidPic)} alt={project.vidPic} 
               onClick={(event) => updateLeftPanel(project.YoutubeLink,false)}/>
 
               {project.Link2 ? 
@@ -156,7 +192,18 @@ const ProjectPage = () => {
                   <img  src={  require("../../"+image)} alt={image} 
                   onClick={(event) => updateLeftPanel(image,true)}/>
                 ))
-              }
+              } */}
+             { carouselItems.map((items)=>{
+              
+              return (
+              <img  src={  require("../../"+items.image)} alt={items.image} 
+              onClick={(event) => updateLeftPanel(items.path,items.isPicture)}/>
+              )
+
+             })
+             }
+              
+
               
             </Carousel>
           </div>
