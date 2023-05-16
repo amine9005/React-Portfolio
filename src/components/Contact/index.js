@@ -19,11 +19,11 @@ const Contact = () => {
     const handleSubmition = async () => {
         const docRef = collection(db,'Contacts')
         const payload = {name:name,email:email,subject:subject,message:message}
-        // alert("Here")
+        console.log("Submition in progress")
         await addDoc(docRef,payload).then(()=> 
-        {alert("Submition was succesful")}
+        {console.log("Submition was succesful")}
         ).catch((error) => {
-          alert(error.message)
+            console.warn("Submition Failed!")
         });
         // alert("Here")
     }
