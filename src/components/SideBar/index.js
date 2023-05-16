@@ -14,17 +14,21 @@ const SideBar  = () => {
         set_menu_btn(!menu_btn )
     }
 
+    const hideNavBar = () => {
+        set_menu_btn(true)
+    }
+
     return <Navbar  className={menu_btn? 'nav-bar':"nav-bar expand"}>
             <Link className='logo' to='/'>
                 <img src={LogoM} alt='logo'/>
                 <img src={SubLogo} alt='Mohamed Amine'
-                onClick={(event) => showNavBar()}
+                onClick={(event) => hideNavBar()}
                 />
             </Link>
             <div className={menu_btn ? 'nav-callopse':'nav-callopse show'}>
             <nav >
                 <NavLink
-                    onClick={(event) => showNavBar()} 
+                    onClick={(event) => hideNavBar()} 
                     exact="true"
                     className="nav-link" 
                     activeclassname="active" 
@@ -37,7 +41,7 @@ const SideBar  = () => {
                     
                 </NavLink>
                 <NavLink
-                onClick={(event) => showNavBar()} 
+                onClick={(event) => hideNavBar()} 
                     exact="true"
                     className="nav-link" 
                     activeclassname="active" 
@@ -48,7 +52,7 @@ const SideBar  = () => {
                     </div>
                 </NavLink>
                 <NavLink
-                onClick={(event) => showNavBar()} 
+                onClick={(event) => hideNavBar()} 
                     exact="true"
                     className="nav-link" 
                     activeclassname="active" 
@@ -70,7 +74,7 @@ const SideBar  = () => {
                     </div>
                 </NavLink> */}
                 <NavLink
-                onClick={(event) => showNavBar()} 
+                onClick={(event) => hideNavBar()} 
                     exact="true"
                     className="nav-link" 
                     activeclassname="active" 
