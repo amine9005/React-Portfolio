@@ -1,11 +1,11 @@
 .project-page{
     position: relative;
-    flex-wrap: nowrap;
     font-size: 2rem;
     color: #fff;
     max-width: 98%;
     height: 100%;
-    
+    overflow-x: hidden;
+
 
     .carousel{
         margin-left: 1rem;
@@ -30,7 +30,6 @@
         justify-content: center;
         align-items: center;
         padding: 0;
-        height: 545px;
     }
 
     .smallImg{

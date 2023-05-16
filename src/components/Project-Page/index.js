@@ -39,6 +39,8 @@ const ProjectPage = () => {
     setSelected(path)
   }
 
+  
+
 
   const responsive = {
     superLargeDesktop: {
@@ -144,7 +146,7 @@ const ProjectPage = () => {
                 
                 <img  src={  require("../../"+project.vidPic)} alt={project.vidPic} 
                 onClick={(event) => updateLeftPanel(project.YoutubeLink2,false)}/>
-              :project.Link2} 
+              :null} 
 
               <img  src={  require("../../"+project.image1)} alt={project.image1} 
               onClick={(event) => updateLeftPanel(project.image1,true)}/>

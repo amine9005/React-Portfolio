@@ -16,18 +16,16 @@ const Contact = () => {
     const [email,setEmail] = useState('')
     const [message,setMessage] = useState('')
 
-
-
     const handleSubmition = async () => {
         const docRef = collection(db,'Contacts')
         const payload = {name:name,email:email,subject:subject,message:message}
-        alert("Here")
+        // alert("Here")
         await addDoc(docRef,payload).then(()=> 
         {alert("Submition was succesful")}
         ).catch((error) => {
           alert(error.message)
         });
-        alert("Here")
+        // alert("Here")
     }
 
   return (
