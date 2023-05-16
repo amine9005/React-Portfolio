@@ -69,9 +69,10 @@ const Contact = () => {
                 </div>
             </div>
            
-            
+            {/* <LogoContact /> */}
         </div>
-        <LogoContact />
+        
+        
 
         <Loader type='pacman'/>
     </>

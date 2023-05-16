@@ -3,15 +3,17 @@
     position: relative;
     color: #fff;
     font-size: 2rem;
-    margin-left: 2.5rem;
+    margin-left: 1.5rem;
     // top: 50%;
     // transform: translateY(-50%);
-    
     max-height: 100%;
-    margin-top: 2rem;
+    margin-top: 1rem;
     padding: 0;
     overflow: hidden;
-    width:52%;
+    .text-zone{
+        width: 100%;
+        max-width: 80rem;
+    }
 
     p{
         font-size: 1.5rem;
@@ -82,19 +84,10 @@
     }
 }
 
-@media (max-width:1310px) {
-
-    .contact-page{
-        width:110%;
-        
-    }
-    
-}
-
 @media (max-width:670px) {
-
     .contact-page{
-        width:200%;
+        .text-zone{
+            width: 100%;
+        }
     }
-    
 }
