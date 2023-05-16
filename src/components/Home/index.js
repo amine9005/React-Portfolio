@@ -30,6 +30,7 @@ const Home = () => {
                 <span className='description'>Progarming is a passion to me, I enjoy creating new things and taken on challenges.</span>
                 <br/>
                 <Link to="/contact" className='flat-button'>Let's make something beautiful</Link>
+                <br></br>
             </div>
             <Logo/>
         </div>

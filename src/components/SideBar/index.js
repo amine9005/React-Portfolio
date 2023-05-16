@@ -7,6 +7,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faBars, faEnvelope, faHome,faSackDollar,faTimes,faTrophy,faUser} from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import Navbar from 'react-bootstrap/Navbar';
+import React, { useEffect } from 'react';
+
 
 const SideBar  = () => {
     const [menu_btn,set_menu_btn] = useState(true)
@@ -17,6 +19,11 @@ const SideBar  = () => {
     const hideNavBar = () => {
         set_menu_btn(true)
     }
+
+    useEffect(() => {
+        document.title = 'Mohamed Amine Selmi';
+        document.textContent = "Mohamed Amine Portfolio"
+      }, []);
 
     return <Navbar  className={menu_btn? 'nav-bar':"nav-bar expand"}>
             <Link className='logo' to='/'>
