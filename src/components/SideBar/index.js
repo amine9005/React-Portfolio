@@ -41,7 +41,7 @@ const SideBar  = () => {
                     activeclassname="active" 
                     to='/'>
                         <div className='nav-btn'>
-                            <FontAwesomeIcon  icon={faHome} color="#4d4d4e"/>
+                            <FontAwesomeIcon  icon={faHome} color="#fff"/>
                             Home
                         </div>
                     
@@ -54,7 +54,7 @@ const SideBar  = () => {
                     activeclassname="active" 
                     to='/about'>
                     <div className='nav-btn'>
-                        <FontAwesomeIcon icon={faUser} color="#4d4d4e"/>
+                        <FontAwesomeIcon icon={faUser} color="#fff"/>
                         About
                     </div>
                 </NavLink>
@@ -65,7 +65,7 @@ const SideBar  = () => {
                     activeclassname="active" 
                     to='/projects'>
                     <div className='nav-btn'>
-                        <FontAwesomeIcon icon={faSackDollar} color="#4d4d4e"/>
+                        <FontAwesomeIcon icon={faSackDollar} color="#fff"/>
                         Projects
                     </div>
                 </NavLink>
@@ -76,7 +76,7 @@ const SideBar  = () => {
                     activeclassname="active" 
                     to='/certifs'>
                     <div className='nav-btn'>
-                        <FontAwesomeIcon icon={faTrophy} color="#4d4d4e"/>
+                        <FontAwesomeIcon icon={faTrophy} color="#fff"/>
                         CERTIFs
                     </div>
                 </NavLink> */}
@@ -87,7 +87,7 @@ const SideBar  = () => {
                     activeclassname="active" 
                     to='/contact'>
                     <div className='nav-btn'>
-                        <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e"/>
+                        <FontAwesomeIcon icon={faEnvelope} color="#fff"/>
                         Contact
                     </div>
                 </NavLink>
@@ -101,7 +101,7 @@ const SideBar  = () => {
                     rel='noreferrer'
                     href='https://www.linkedin.com/in/mohamed-amine-selmi-52216a268/'
                     >
-                        <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e"/>
+                        <FontAwesomeIcon icon={faLinkedin} color="#fff"/>
                     </a>
                 </li>
                 
@@ -110,7 +110,7 @@ const SideBar  = () => {
                     rel='noreferrer'
                     href='https://github.com/amine9005'
                     >
-                        <FontAwesomeIcon icon={faGithub} color="#4d4d4e"/>
+                        <FontAwesomeIcon icon={faGithub} color="#fff"/>
                     </a>
                 </li>
 
@@ -119,7 +119,7 @@ const SideBar  = () => {
                     rel='noreferrer'
                     href='https://www.facebook.com/medamine.selmi.961/'
                     >
-                        <FontAwesomeIcon icon={faFacebook} color="#4d4d4e"/>
+                        <FontAwesomeIcon icon={faFacebook} color="#fff"/>
                     </a>
                 </li>
             </ul>
@@ -128,7 +128,7 @@ const SideBar  = () => {
             <FontAwesomeIcon
             className={menu_btn? "menu bars":"menu times" }
             onClick={(event) => showNavBar()} 
-            icon={menu_btn? faBars : faTimes } color="#4d4d4e"/>
+            icon={menu_btn? faBars : faTimes } color="#fff"/>
             
         </Navbar>
 }
