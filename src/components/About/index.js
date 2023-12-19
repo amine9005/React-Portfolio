@@ -24,7 +24,7 @@ export const About = () => {
           </h1>
 
           <p className="first">
-            I'm an aspiring full stack developer I'm <strong>energetic</strong>{' '}
+            I'm a full stack developer I'm <strong>energetic</strong>{' '}
             and <strong>ambitious</strong> I'm a <strong>passionate</strong>{' '}
             programmer who's <strong>self disciplined</strong>. I'm looking for
             the <strong>opportunity</strong> to work with the latest
